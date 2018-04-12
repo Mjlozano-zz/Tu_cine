@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<JFXTabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="404.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tu_cine.FXMLDocumentController">
+   <tabs>
+      <Tab text="Iniciar Sesion">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <JFXTextField labelFloat="true" layoutX="76.0" layoutY="160.0" prefHeight="38.0" prefWidth="247.0" promptText="Nombre De Usuario">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXPasswordField labelFloat="true" layoutX="76.0" layoutY="224.0" prefHeight="36.0" prefWidth="250.0" promptText="Contraseña">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <JFXButton layoutX="75.0" layoutY="303.0" onAction="#gotoHome" prefHeight="41.0" prefWidth="253.0" style="-fx-background-color: #00bcd4;" text="Iniciar Sesion">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXCheckBox layoutX="75.0" layoutY="273.0" text="Recuerdame" />
+                  <Label layoutX="76.0" layoutY="352.0" text="¿Olvidaste tu contraseña? click aqui" />
+                  <ImageView fitHeight="119.0" fitWidth="134.0" layoutX="140.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Imagenes/user.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="26.0" fitWidth="27.0" layoutX="40.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Imagenes/userIcon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="31.0" layoutX="41.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Imagenes/passIcon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Registro">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <JFXTextField labelFloat="true" layoutX="62.0" layoutY="30.0" prefHeight="34.0" prefWidth="272.0" promptText="Nombres" />
+                  <JFXTextField labelFloat="true" layoutX="62.0" layoutY="87.0" prefHeight="34.0" prefWidth="272.0" promptText="Apellidos" />
+                  <JFXTextField labelFloat="true" layoutX="62.0" layoutY="140.0" prefHeight="34.0" prefWidth="272.0" promptText="Email" />
+                  <JFXPasswordField labelFloat="true" layoutX="62.0" layoutY="194.0" prefHeight="35.0" prefWidth="273.0" promptText="Contraseña" />
+                  <RadioButton layoutX="62.0" layoutY="265.0" mnemonicParsing="false" text="C.C" />
+                  <RadioButton layoutX="117.0" layoutY="265.0" mnemonicParsing="false" text="T.I" />
+                  <JFXTextField labelFloat="true" layoutX="62.0" layoutY="290.0" prefHeight="34.0" prefWidth="275.0" promptText="Numero de Documento" />
+                  <Label layoutX="62.0" layoutY="242.0" text="Tipo de Documento:" />
+                  <DatePicker layoutX="64.0" layoutY="337.0" prefHeight="25.0" prefWidth="161.0" promptText="Fecha de nacimiento" />
+                  <JFXButton layoutX="60.0" layoutY="377.0" prefHeight="41.0" prefWidth="276.0" style="-fx-background-color: #00bcd4;" text="Registrarme">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+   </tabs>
+</JFXTabPane>

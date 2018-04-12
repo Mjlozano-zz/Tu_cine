@@ -29,19 +29,20 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     private void gotoHome(ActionEvent e)throws IOException {         
-        openHome(e);
+        openWindow(e, "FXMLHome_page.fxml");
     }
     
     @FXML 
-    private void openHome(ActionEvent e)throws IOException{
-        Parent home_page_parent = FXMLLoader.load(getClass().getResource("FXMLHome_page.fxml"));
+    private void openWindow(ActionEvent e, String file) throws IOException{
+        Parent home_page_parent = FXMLLoader.load(getClass().getResource(file));
         Scene home_page_scene = new Scene(home_page_parent);
         Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         
         app_stage.hide(); //optional
         app_stage.setScene(home_page_scene);
-        app_stage.show(); 
+        app_stage.show();
     }
+    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {

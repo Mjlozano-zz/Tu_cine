@@ -55,16 +55,16 @@
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <JFXTextField labelFloat="true" layoutX="62.0" layoutY="30.0" prefHeight="34.0" prefWidth="272.0" promptText="Nombres" />
-                  <JFXTextField labelFloat="true" layoutX="62.0" layoutY="87.0" prefHeight="34.0" prefWidth="272.0" promptText="Apellidos" />
-                  <JFXTextField labelFloat="true" layoutX="62.0" layoutY="140.0" prefHeight="34.0" prefWidth="272.0" promptText="Email" />
-                  <JFXPasswordField labelFloat="true" layoutX="62.0" layoutY="194.0" prefHeight="35.0" prefWidth="273.0" promptText="Contraseña" />
+                  <JFXTextField fx:id="txtnombre" labelFloat="true" layoutX="62.0" layoutY="30.0" prefHeight="34.0" prefWidth="272.0" promptText="Nombres" />
+                  <JFXTextField fx:id="txtapellidos" labelFloat="true" layoutX="62.0" layoutY="87.0" prefHeight="34.0" prefWidth="272.0" promptText="Apellidos" />
+                  <JFXTextField fx:id="txtemail" labelFloat="true" layoutX="62.0" layoutY="140.0" prefHeight="34.0" prefWidth="272.0" promptText="Email" />
+                  <JFXPasswordField fx:id="txtcontraseña" labelFloat="true" layoutX="62.0" layoutY="194.0" prefHeight="35.0" prefWidth="273.0" promptText="Contraseña" />
                   <RadioButton layoutX="62.0" layoutY="265.0" mnemonicParsing="false" text="C.C" />
                   <RadioButton layoutX="117.0" layoutY="265.0" mnemonicParsing="false" text="T.I" />
-                  <JFXTextField labelFloat="true" layoutX="62.0" layoutY="290.0" prefHeight="34.0" prefWidth="275.0" promptText="Numero de Documento" />
+                  <JFXTextField fx:id="txtdocumento" labelFloat="true" layoutX="62.0" layoutY="290.0" prefHeight="34.0" prefWidth="275.0" promptText="Numero de Documento" />
                   <Label layoutX="62.0" layoutY="242.0" text="Tipo de Documento:" />
-                  <DatePicker layoutX="64.0" layoutY="337.0" prefHeight="25.0" prefWidth="161.0" promptText="Fecha de nacimiento" />
-                  <JFXButton layoutX="60.0" layoutY="377.0" prefHeight="41.0" prefWidth="276.0" style="-fx-background-color: #00bcd4;" text="Registrarme">
+                  <DatePicker fx:id="txtnacimiento" layoutX="64.0" layoutY="337.0" onAction="#registrar" prefHeight="25.0" prefWidth="161.0" promptText="Fecha de nacimiento" />
+                  <JFXButton layoutX="60.0" layoutY="377.0" onAction="#registrar" prefHeight="41.0" prefWidth="276.0" style="-fx-background-color: #00bcd4;" text="Registrarme">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>

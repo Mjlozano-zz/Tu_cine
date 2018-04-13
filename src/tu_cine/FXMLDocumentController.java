@@ -6,6 +6,7 @@
 package tu_cine;
 
 import com.jfoenix.controls.*;
+import java.io.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -16,20 +17,44 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author JESÚS LOZANO
  */
 public class FXMLDocumentController implements Initializable {
-    //@FXML 
-    //private JFXButton loginB;
+    @FXML 
+    private JFXTextField txtnombre, txtapellidos, txtemail, txtdocumento;
+    private JFXPasswordField txtcontraseña;
+    
     
     @FXML
     private void gotoHome(ActionEvent e)throws IOException {         
         openWindow(e, "FXMLHome_page.fxml");
+    }
+    
+    @FXML
+    private void registrar(ActionEvent ev)throws IOException{
+       File f = null;
+       FileWriter w;
+       BufferedWriter bw;
+       try {
+            f = new File("Usuarios.txt");
+            w = new FileWriter(f, true);
+            bw = new BufferedWriter(w);
+            bw.write(txtnombre.getText()+" | "+ txtapellidos.getText()+" | "+txtemail.getText()+ " | "+txtdocumento.getText());
+            bw.newLine();
+            bw.write("----------------------------------------------------");
+            bw.newLine();
+            bw.close();
+            creaNombreUsuario();
+            idUsuarios();
+            cleanRegistro();
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "Ha habido un error! " + e);
+        }
     }
     
     @FXML 
@@ -43,6 +68,35 @@ public class FXMLDocumentController implements Initializable {
         app_stage.show();
     }
     
+    @FXML
+    private void cleanRegistro(){
+        txtnombre.setText("");
+        txtapellidos.setText("");
+        txtemail.setText("");
+        txtdocumento.setText("");
+    }
+   
+    private String creaNombreUsuario(){
+        String usuario;
+        String[] mail = txtemail.getText().split("@");
+        usuario = mail[0];
+        return usuario;
+    }
+    
+    private void idUsuarios(){
+        File f = null;
+       FileWriter w;
+       BufferedWriter bw;
+       try {
+            f = new File("IDusuarios.txt");
+            w = new FileWriter(f, true);
+            bw = new BufferedWriter(w);
+            bw.write(creaNombreUsuario()+",");
+            bw.close();
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "Ha habido un error! " + e);
+        }
+    }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {

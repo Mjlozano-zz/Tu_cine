@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.media.*?>
 <?import javafx.scene.image.*?>
 <?import com.jfoenix.controls.*?>
 <?import javafx.scene.text.*?>
@@ -11,7 +12,54 @@
 
 <AnchorPane id="AnchorPane" prefHeight="580.0" prefWidth="842.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tu_cine.FXMLHome_pageController">
    <children>
-      <AnchorPane prefHeight="53.0" prefWidth="842.0" style="-fx-background-color: #aeaeae;" />
-      <AnchorPane layoutX="-2.0" layoutY="53.0" prefHeight="527.0" prefWidth="842.0" style="-fx-background-color: #e0e0e0;" />
+      <AnchorPane prefHeight="52.0" prefWidth="846.0" style="-fx-background-color: #aeaeae;">
+         <children>
+            <ImageView fitHeight="59.0" fitWidth="47.0" layoutX="352.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagenes/tickets.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="47.0" fitWidth="54.0" layoutX="73.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagenes/Movies.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="movies" layoutX="68.0" layoutY="45.0" text="Peliculas">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="47.0" fitWidth="54.0" layoutX="174.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagenes/programacion.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="47.0" fitWidth="47.0" layoutX="269.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagenes/salas.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="276.0" layoutY="45.0" text="Salas">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="movies1" layoutX="157.0" layoutY="45.0" text="Programacion">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="movies2" layoutX="344.0" layoutY="45.0" prefHeight="6.0" prefWidth="46.0" text="Tickets">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="38.0" fitWidth="54.0" layoutX="794.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagenes/logout.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <AnchorPane layoutY="65.0" prefHeight="516.0" prefWidth="846.0" style="-fx-background-color: #e0e0e0;" />
    </children>
 </AnchorPane>

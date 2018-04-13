@@ -15,17 +15,17 @@
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <JFXTextField labelFloat="true" layoutX="76.0" layoutY="160.0" prefHeight="38.0" prefWidth="247.0" promptText="Nombre De Usuario">
+                  <JFXTextField fx:id="txtusuarioID" labelFloat="true" layoutX="76.0" layoutY="160.0" prefHeight="38.0" prefWidth="247.0" promptText="Nombre De Usuario">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </JFXTextField>
-                  <JFXPasswordField labelFloat="true" layoutX="76.0" layoutY="224.0" prefHeight="36.0" prefWidth="250.0" promptText="Contraseña">
+                  <JFXPasswordField fx:id="txtcontrase" labelFloat="true" layoutX="76.0" layoutY="224.0" prefHeight="36.0" prefWidth="250.0" promptText="Contraseña">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </JFXPasswordField>
-                  <JFXButton layoutX="75.0" layoutY="303.0" onAction="#gotoHome" prefHeight="41.0" prefWidth="253.0" style="-fx-background-color: #00bcd4;" text="Iniciar Sesion">
+                  <JFXButton layoutX="75.0" layoutY="303.0" onAction="#logIn" prefHeight="41.0" prefWidth="253.0" style="-fx-background-color: #00bcd4;" text="Iniciar Sesion">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -58,12 +58,12 @@
                   <JFXTextField fx:id="txtnombre" labelFloat="true" layoutX="62.0" layoutY="30.0" prefHeight="34.0" prefWidth="272.0" promptText="Nombres" />
                   <JFXTextField fx:id="txtapellidos" labelFloat="true" layoutX="62.0" layoutY="87.0" prefHeight="34.0" prefWidth="272.0" promptText="Apellidos" />
                   <JFXTextField fx:id="txtemail" labelFloat="true" layoutX="62.0" layoutY="140.0" prefHeight="34.0" prefWidth="272.0" promptText="Email" />
-                  <JFXPasswordField fx:id="txtcontraseña" labelFloat="true" layoutX="62.0" layoutY="194.0" prefHeight="35.0" prefWidth="273.0" promptText="Contraseña" />
+                  <JFXPasswordField fx:id="txtpassw" labelFloat="true" layoutX="62.0" layoutY="194.0" prefHeight="35.0" prefWidth="273.0" promptText="Contraseña" />
                   <RadioButton layoutX="62.0" layoutY="265.0" mnemonicParsing="false" text="C.C" />
                   <RadioButton layoutX="117.0" layoutY="265.0" mnemonicParsing="false" text="T.I" />
-                  <JFXTextField fx:id="txtdocumento" labelFloat="true" layoutX="62.0" layoutY="290.0" prefHeight="34.0" prefWidth="275.0" promptText="Numero de Documento" />
+                  <JFXTextField fx:id="txtdocumento" labelFloat="true" layoutX="61.0" layoutY="301.0" prefHeight="34.0" prefWidth="275.0" promptText="Numero de Documento" />
                   <Label layoutX="62.0" layoutY="242.0" text="Tipo de Documento:" />
-                  <DatePicker fx:id="txtnacimiento" layoutX="64.0" layoutY="337.0" onAction="#registrar" prefHeight="25.0" prefWidth="161.0" promptText="Fecha de nacimiento" />
+                  <DatePicker fx:id="txtnacimiento" layoutX="62.0" layoutY="343.0" onAction="#registrar" prefHeight="25.0" prefWidth="161.0" promptText="Fecha de nacimiento" />
                   <JFXButton layoutX="60.0" layoutY="377.0" onAction="#registrar" prefHeight="41.0" prefWidth="276.0" style="-fx-background-color: #00bcd4;" text="Registrarme">
                      <font>
                         <Font name="System Bold" size="14.0" />

@@ -65,7 +65,7 @@ public class FXMLDocumentController implements Initializable {
     }
 
     @FXML
-    private void openWindow(ActionEvent e, String file) throws IOException {
+    public void openWindow(ActionEvent e, String file) throws IOException {
         Parent home_page_parent = FXMLLoader.load(getClass().getResource(file));
         Scene home_page_scene = new Scene(home_page_parent);
         Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();

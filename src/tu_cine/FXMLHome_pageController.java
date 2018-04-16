@@ -4,25 +4,44 @@
  * and open the template in the editor.
  */
 package tu_cine;
-import javafx.fxml.FXML;
+
+import com.jfoenix.controls.*;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
-import com.jfoenix.controls.*;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.layout.Background;
+import javafx.stage.Stage;
+
 /**
  * FXML Controller class
  *
  * @author JESÚS LOZANO
  */
 public class FXMLHome_pageController implements Initializable {
+
     @FXML
-    JFXButton prueba ;
- 
-    
+    JFXButton unoA;
+
+    public void openTickets(ActionEvent e) throws IOException {
+        Parent ticket_page_parent = FXMLLoader.load(getClass().getResource("FXMLTickets.fxml"));
+        Scene tickets_scene = new Scene(ticket_page_parent);
+        Stage ap_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        ap_stage.hide(); //optional
+        ap_stage.setScene(tickets_scene);
+        ap_stage.show();
+    }
+
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-    
+    }
+
 }

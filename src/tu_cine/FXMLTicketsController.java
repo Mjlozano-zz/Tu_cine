@@ -25,7 +25,7 @@ public class FXMLTicketsController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         pel.getItems().add("Avengers: Infinity war");
         pel.getItems().add("El entierro de la anaconda cabezona");
-        pel.getItems().add("Acuestate conmigo y seras madre ;)");
+        pel.getItems().add("Acuestate conmigo y seras madre");
         sala.getItems().add("sala 01");
         sala.getItems().add("sala 02");
     }    

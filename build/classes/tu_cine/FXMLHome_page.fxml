@@ -10,7 +10,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="580.0" prefWidth="842.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tu_cine.FXMLHome_pageController">
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="846.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tu_cine.FXMLHome_pageController">
    <children>
       <AnchorPane prefHeight="75.0" prefWidth="846.0" style="-fx-background-color: #aeaeae;">
          <children>
@@ -56,6 +56,28 @@
                </graphic>
             </JFXButton>
          </children></AnchorPane>
-      <AnchorPane layoutY="77.0" prefHeight="504.0" prefWidth="846.0" style="-fx-background-color: #e0e0e0;" />
+      <AnchorPane layoutY="77.0" prefHeight="460.0" prefWidth="846.0" style="-fx-background-color: #e0e0e0;">
+         <children>
+            <ImageView fitHeight="469.0" fitWidth="846.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagenes/home.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="fecha" layoutX="390.0" layoutY="180.0" text="fecha">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="horaa" layoutX="382.0" layoutY="89.0" text="Hora">
+               <font>
+                  <Font size="64.0" />
+               </font>
+            </Label>
+            <Label fx:id="mt" layoutX="508.0" layoutY="117.0" text="mt">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
    </children>
 </AnchorPane>

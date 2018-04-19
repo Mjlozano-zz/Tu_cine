@@ -5,8 +5,10 @@
  */
 package tu_cine;
 
+import com.jfoenix.controls.*;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
 /**
@@ -16,12 +18,16 @@ import javafx.fxml.Initializable;
  */
 public class FXMLTicketsController implements Initializable {
 
-    /**
-     * Initializes the controller class.
-     */
+    @FXML
+    JFXComboBox<String> pel, sala;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        pel.getItems().add("Avengers: Infinity war");
+        pel.getItems().add("El entierro de la anaconda cabezona");
+        pel.getItems().add("Acuestate conmigo y seras madre");
+        sala.getItems().add("sala 01");
+        sala.getItems().add("sala 02");
     }    
     
 }

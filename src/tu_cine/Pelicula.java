@@ -3,22 +3,22 @@ package tu_cine;
 
 
 public class Pelicula {
-    private String nombre, clasificacion, genero, sinopsis, calidad, director, votacion;
+    private String nombre, clasificacion, genero, sinopsis, calidad, director, fechaEstreno;
 
-    public Pelicula(String nombre, String clasificacion, String genero, String sinopsis, String calidad, String director, String votacion) {
+    public Pelicula(String nombre, String clasificacion, String genero, String sinopsis, String calidad, String director, String fechaEstreno) {
         this.nombre = nombre;
         this.clasificacion = clasificacion;
         this.genero = genero;
         this.sinopsis = sinopsis;
         this.calidad = calidad;
         this.director = director;
-        this.votacion = votacion;
+        this.fechaEstreno = fechaEstreno;
     }
     
     
     @Override
     public String toString(){
-       return "Nombre: "+nombre+"\n"+"Genero: "+genero+"\n"+"Clasificacion: "+clasificacion+"\n"+"Sinopsis: "+sinopsis+"\n"+"Calidad: "+calidad+"\n"+"Director: "+director+"\n"+"Votacion: "+votacion;
+       return "Nombre: "+nombre+"\n"+"Genero: "+genero+"\n"+"Clasificacion: "+clasificacion+"\n"+"Sinopsis: "+sinopsis+"\n"+"Calidad: "+calidad+"\n"+"Director: "+director+"\n"+"Fecha de estreno: "+fechaEstreno;
     }
 
     public String getNombre() {
@@ -45,8 +45,8 @@ public class Pelicula {
         return director;
     }
 
-    public String getVotacion() {
-        return votacion;
+    public String getFechaEstreno() {
+        return fechaEstreno;
     }
     
 }

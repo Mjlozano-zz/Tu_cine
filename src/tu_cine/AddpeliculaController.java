@@ -6,6 +6,7 @@
 package tu_cine;
 
 import com.jfoenix.controls.JFXComboBox;
+import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
 import java.io.IOException;
@@ -18,6 +19,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
@@ -32,11 +35,16 @@ public class AddpeliculaController implements Initializable {
     @FXML
     private JFXTextArea sinoptxt;
     @FXML
-    private JFXComboBox<String> tipopel, puntuaciontxt;
+    private JFXComboBox<String> tipopel;
+    @FXML
+    private Label txt;
+    @FXML
+    private JFXDatePicker fechaestrenotxt;
     
     public void agregar(ActionEvent e){
-        FXMLCarteleraController.peliculas.add(new Pelicula(nombrepeltxt.getText(), clastxt.getText(),generotxt.getText(),sinoptxt.getText(), tipopel.getSelectionModel().getSelectedItem() ,directortxt.getText(), puntuaciontxt.getSelectionModel().getSelectedItem()));
+        FXMLCarteleraController.peliculas.add(new Pelicula(nombrepeltxt.getText(), clastxt.getText(),generotxt.getText(),sinoptxt.getText(), tipopel.getSelectionModel().getSelectedItem() ,directortxt.getText(), fechaestrenotxt.getValue().toString()));
         System.out.println(FXMLCarteleraController.peliculas.get(0));
+        txt.setText(FXMLCarteleraController.peliculas.get(0).getNombre());
     }
     
     public void back(ActionEvent e) throws IOException{
@@ -50,14 +58,10 @@ public class AddpeliculaController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        tipopel.getItems().add("3D");
         tipopel.getItems().add("2D");
-        tipopel.getItems().add("3D-2D");
-        puntuaciontxt.getItems().add("1");
-        puntuaciontxt.getItems().add("2");
-        puntuaciontxt.getItems().add("3");
-        puntuaciontxt.getItems().add("4");
-        puntuaciontxt.getItems().add("5");
+        tipopel.getItems().add("3D");
+        tipopel.getItems().add("3D-2D");   
+        
     }    
     
 }

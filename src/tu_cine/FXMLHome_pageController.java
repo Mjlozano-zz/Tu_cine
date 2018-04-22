@@ -44,7 +44,10 @@ public class FXMLHome_pageController implements Initializable {
         ap_stage.hide(); //optional
         ap_stage.setScene(tickets_scene);
         ap_stage.show();
+             
        }
+       
+       
 
 
     @Override

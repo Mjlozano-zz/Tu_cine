@@ -87,7 +87,7 @@
             <JFXButton layoutX="41.0" layoutY="415.0" style="-fx-background-color: #d32f2f;" text="Comprar tickets" textFill="WHITE" />
             <JFXButton layoutX="302.0" layoutY="415.0" style="-fx-background-color: #d32f2f;" text="Comprar tickets" textFill="WHITE" />
             <JFXButton layoutX="560.0" layoutY="415.0" style="-fx-background-color: #d32f2f;" text="Comprar tickets" textFill="WHITE" />
-            <JFXButton fx:id="ver_mas1" layoutX="147.0" layoutY="415.0" text="Ver más" />
+            <JFXButton fx:id="ver_mas1" layoutX="147.0" layoutY="415.0" onAction="#verMas" text="Ver más" />
             <JFXButton fx:id="ver_mas2" layoutX="417.0" layoutY="415.0" text="Ver más" />
             <JFXButton fx:id="ver_mas3" layoutX="669.0" layoutY="415.0" text="Ver más" />
             <Label fx:id="genero_label1" layoutX="104.0" layoutY="382.0" text="Genero" />
@@ -111,6 +111,7 @@
                </font>
             </Label>
             <JFXButton layoutX="573.0" layoutY="17.0" onAction="#addMovie" text="Agregar pelicula" />
+            <JFXButton layoutX="116.0" layoutY="18.0" onAction="#back" text="Volver" />
          </children>
       </AnchorPane>
    </children>

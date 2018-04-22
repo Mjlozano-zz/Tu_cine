@@ -9,6 +9,7 @@ import com.jfoenix.controls.*;
 import java.io.*;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Properties;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,6 +19,13 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 import javax.swing.JOptionPane;
 
 /**
@@ -30,6 +38,8 @@ public class FXMLDocumentController implements Initializable {
     private JFXTextField txtnombre, txtapellidos, txtemail, txtdocumento, txtusuarioID;
     @FXML
     private JFXPasswordField txtpassw, txtcontrase;
+    @FXML
+    private JFXComboBox tdoc;
 
     
     @FXML
@@ -50,12 +60,13 @@ public class FXMLDocumentController implements Initializable {
             f = new File("Usuarios.txt");
             w = new FileWriter(f, true);
             bw = new BufferedWriter(w);
-            bw.write(txtnombre.getText() + " | " + txtapellidos.getText() + " | " + txtemail.getText() + " | " + txtdocumento.getText());
+            bw.write(txtnombre.getText() + " | " + txtapellidos.getText() + " | " + txtemail.getText() + " | " + tdoc.getSelectionModel().getSelectedItem()+ " | " +txtdocumento.getText());
             bw.newLine();
-            bw.write("----------------------------------------------------------");
+            bw.write("------------------------------------------------------------------------------------------");
             bw.newLine();
             bw.close();
-            creaNombreUsuario();
+            //creaNombreUsuario();
+            SendMail(creaNombreUsuario());
             idUsuarios();
             passwords();
             cleanRegistro();
@@ -141,6 +152,7 @@ public class FXMLDocumentController implements Initializable {
         }
         return exist;
     }
+    
     private boolean findPassw(){
         boolean existe= false;
         try {
@@ -160,9 +172,39 @@ public class FXMLDocumentController implements Initializable {
         return existe;
     }
     
+    public void SendMail(String nuser) {
+        Properties props = new Properties();
+        props.put("mail.smtp.auth", "true");
+        props.put("mail.smtp.starttls.enable", "true");
+        props.put("mail.smtp.host", "smtp.gmail.com");
+        props.put("mail.smtp.port", "587");
+
+        Session session = Session.getInstance(props,
+                new javax.mail.Authenticator() {
+                    protected PasswordAuthentication getPasswordAuthentication() {
+                        return new PasswordAuthentication("tucine18@gmail.com", "tucine2018");
+                    }
+                });
+
+        try {
+
+            Message message = new MimeMessage(session);
+            message.setFrom(new InternetAddress("tucine18@gmail.com"));
+            message.setRecipients(Message.RecipientType.TO,InternetAddress.parse(txtemail.getText()));
+            message.setSubject("Bienvenido a TU CINE!");
+            message.setText("Desde TU CINE te damos la bienvenida, gracias por utilizar nuestros servicios\nTu nombre de usuario es: "+nuser);
+
+            Transport.send(message);
+
+        } catch (MessagingException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        tdoc.getItems().add("Cedula de Ciudadania");
+        tdoc.getItems().add("Tarjeta de Identidad");
         
     }    
     

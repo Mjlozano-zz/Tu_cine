@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="547.0" prefWidth="813.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutY="52.0" prefHeight="495.0" prefWidth="813.0" style="-fx-background-color: #efebe9;">
+         <children>
+            <ImageView fitHeight="293.0" fitWidth="321.0" layoutX="43.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagenes/peliculas/avengers.jpg" />
+               </image>
+               <effect>
+                  <Reflection fraction="0.24" topOpacity="0.16" />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="293.0" fitWidth="321.0" layoutX="304.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <effect>
+                  <Reflection fraction="0.24" topOpacity="0.16" />
+               </effect>
+               <image>
+                  <Image url="@Imagenes/peliculas/deadpool.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="293.0" fitWidth="321.0" layoutX="562.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <effect>
+                  <Reflection fraction="0.24" topOpacity="0.16" />
+               </effect>
+               <image>
+                  <Image url="@Imagenes/peliculas/antman.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="pelicula_label1" layoutX="43.0" layoutY="329.0" text="Avengers: Infinity War">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="43.0" layoutY="356.0" text="Clasificación:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="304.0" layoutY="356.0" text="Clasificación:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="562.0" layoutY="356.0" text="Clasificación:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="pelicula_label2" layoutX="305.0" layoutY="329.0" text="Deadpool 2">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="pelicula_label3" layoutX="561.0" layoutY="329.0" text="Ant-Man and The Wasp">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="clasificacion_label1" layoutX="132.0" layoutY="357.0" text="clasificacionlabel" />
+            <Label fx:id="clasificacion_label2" layoutX="387.0" layoutY="357.0" text="clasificacionlabel" />
+            <Label fx:id="clasificacion_label3" layoutX="645.0" layoutY="357.0" text="clasificacionlabel" />
+            <Label layoutX="43.0" layoutY="381.0" text="Genero:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="304.0" layoutY="381.0" text="Genero:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="562.0" layoutY="381.0" text="Genero:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="41.0" layoutY="415.0" style="-fx-background-color: #d32f2f;" text="Comprar tickets" textFill="WHITE" />
+            <JFXButton layoutX="302.0" layoutY="415.0" style="-fx-background-color: #d32f2f;" text="Comprar tickets" textFill="WHITE" />
+            <JFXButton layoutX="560.0" layoutY="415.0" style="-fx-background-color: #d32f2f;" text="Comprar tickets" textFill="WHITE" />
+            <JFXButton fx:id="ver_mas1" layoutX="147.0" layoutY="415.0" text="Ver más" />
+            <JFXButton fx:id="ver_mas2" layoutX="417.0" layoutY="415.0" text="Ver más" />
+            <JFXButton fx:id="ver_mas3" layoutX="669.0" layoutY="415.0" text="Ver más" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="-4.0" prefHeight="60.0" prefWidth="813.0" style="-fx-background-color: #d32f2f;">
+         <children>
+            <ImageView fitHeight="56.0" fitWidth="81.0" layoutX="-2.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagenes/banner.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="56.0" fitWidth="81.0" layoutX="729.0" layoutY="4.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagenes/banner.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="323.0" layoutY="8.0" text="CARTELERA">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

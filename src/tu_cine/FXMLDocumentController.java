@@ -40,6 +40,8 @@ public class FXMLDocumentController implements Initializable {
     private JFXPasswordField txtpassw, txtcontrase;
     @FXML
     private JFXComboBox tdoc;
+    @FXML
+    private JFXDatePicker bornDatetxt;
 
     
     @FXML
@@ -57,12 +59,12 @@ public class FXMLDocumentController implements Initializable {
         FileWriter w;
         BufferedWriter bw;
         try {
-            f = new File("Usuarios.txt");
+            f = new File("InfoUsuarios.txt");
             w = new FileWriter(f, true);
             bw = new BufferedWriter(w);
-            bw.write(txtnombre.getText() + " | " + txtapellidos.getText() + " | " + txtemail.getText() + " | " + tdoc.getSelectionModel().getSelectedItem()+ " | " +txtdocumento.getText());
+            bw.write(txtnombre.getText() + " | " + txtapellidos.getText() + " | " + txtemail.getText() + " | " + tdoc.getSelectionModel().getSelectedItem()+ " | " +txtdocumento.getText()+ " | " +bornDatetxt.getValue().toString());
             bw.newLine();
-            bw.write("------------------------------------------------------------------------------------------");
+            bw.write("--------------------------------------------------------------------------------------------------------");
             bw.newLine();
             bw.close();
             //creaNombreUsuario();

@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
-<?import javafx.scene.image.*?>
-<?import com.jfoenix.controls.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="536.0" prefWidth="748.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tu_cine.TicketsController">
+<AnchorPane id="AnchorPane" prefHeight="536.0" prefWidth="748.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tu_cine.TicketsController">
    <children>
       <AnchorPane layoutY="118.0" prefHeight="367.0" prefWidth="322.0">
          <children>
@@ -458,9 +459,8 @@
       </AnchorPane>
       <JFXTextField fx:id="txtnombre" focusColor="#d32f2f" labelFloat="true" layoutX="439.0" layoutY="166.0" prefHeight="31.0" prefWidth="227.0" promptText="Nombre" />
       <JFXTextField fx:id="txtdocumento" focusColor="#d32f2f" labelFloat="true" layoutX="439.0" layoutY="224.0" prefHeight="31.0" prefWidth="227.0" promptText="Numero de Documento" />
-      <DatePicker fx:id="txtfecha" layoutX="439.0" layoutY="286.0" promptText="Fecha" />
-      <JFXComboBox fx:id="pelis" focusColor="#d32f2f" labelFloat="true" layoutX="439.0" layoutY="340.0" prefHeight="25.0" prefWidth="227.0" promptText="Pelicula" />
-      <JFXComboBox fx:id="sala" focusColor="#d32f2f" labelFloat="true" layoutX="439.0" layoutY="387.0" promptText="Sala" />
+      <JFXComboBox fx:id="pelis" focusColor="#d32f2f" labelFloat="true" layoutX="439.0" layoutY="289.0" prefHeight="25.0" prefWidth="227.0" promptText="Pelicula" />
+      <JFXComboBox fx:id="sala" focusColor="#d32f2f" labelFloat="true" layoutX="440.0" layoutY="337.0" promptText="Sala" />
       <ImageView fitHeight="25.0" fitWidth="30.0" layoutX="16.0" layoutY="485.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Imagenes/libre.png" />
@@ -479,7 +479,7 @@
       <Label layoutX="47.0" layoutY="489.0" text="Disponible" />
       <Label layoutX="145.0" layoutY="489.0" text="Seleccionado" />
       <Label layoutX="257.0" layoutY="489.0" text="Ocupado" />
-      <JFXButton layoutX="472.0" layoutY="436.0" prefHeight="37.0" prefWidth="161.0" style="-fx-background-color: #d32f2f;" text="Comprar Ticket" textFill="#fcf8f8">
+      <JFXButton layoutX="472.0" layoutY="433.0" prefHeight="37.0" prefWidth="161.0" style="-fx-background-color: #d32f2f;" text="Comprar Ticket" textFill="#fcf8f8">
          <font>
             <Font size="14.0" />
          </font>
@@ -500,5 +500,7 @@
             </ImageView>
          </graphic>
       </JFXButton>
+      <JFXDatePicker fx:id="fechatxt" defaultColor="#d32f2f" layoutX="520.0" layoutY="337.0" prefHeight="25.0" prefWidth="146.0" promptText="Fecha" />
+      <JFXComboBox fx:id="funciontxt" focusColor="#d32f2f" layoutX="440.0" layoutY="380.0" prefHeight="25.0" prefWidth="70.0" promptText="Funcion" />
    </children>
 </AnchorPane>

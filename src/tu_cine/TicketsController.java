@@ -26,6 +26,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javax.imageio.ImageIO;
 
@@ -41,27 +42,26 @@ public class TicketsController implements Initializable {
 
     @FXML
     JFXComboBox<String> pelis, sala;
+    
+    @FXML
+     GridPane asientos;
+             
 
-    Boolean[][] sala1 = new Boolean[10][8];
-    Boolean[][] sala2 = new Boolean[10][8];
-
-    /*public void cambiarEstado() throws FileNotFoundException {
-        A1.setOnMouseClicked(new EventHandler<MouseEvent>(){
-         Image image = new Image(getClass().getResource("Imagenes/seleccionado.png").toExternalForm());
-         
-            @Override
-            public void handle(MouseEvent event) {
-                A1.setImage(image);
-            }
-        });
-        
-    }*/
+    Boolean[][] sala1 = new Boolean[10][13];
+    Boolean[][] sala2 = new Boolean[10][13];
+    Image seleccionado = new Image(getClass().getResource("Imagenes/seleccionado.png").toExternalForm());
+    Image ocupado = new Image(getClass().getResource("Imagenes/ocupado.png").toExternalForm());
+    Image libre = new Image(getClass().getResource("Imagenes/libre.png").toExternalForm());
+    
     
     public void llenarMatriz(){
-        for (int i = 1; i < 10; i++) {
-            for (int j = 1; j < 8; j++) {
-                sala1[i][j] = false;
-                
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 13; j++) {        
+                if(i%2 != 0){
+                    sala1[i][j] = true;
+                }else{
+                    sala1[i][j] = false;
+                }
             }
         }
     }
@@ -79,20 +79,34 @@ public class TicketsController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
         pelis.getItems().add("Avengers: Infinity War");
         pelis.getItems().add("Deadpool 2");
         pelis.getItems().add("El entierro de la anaconda cabezona");
         sala.getItems().add("sala 01");
         sala.getItems().add("sala 02");
         
-        A1.setOnMouseClicked(new EventHandler<MouseEvent>(){
-         Image image = new Image(getClass().getResource("Imagenes/seleccionado.png").toExternalForm());
-         
+        /*A1.setOnMouseClicked(new EventHandler<MouseEvent>(){
             @Override
             public void handle(MouseEvent event) {
                 A1.setImage(image);
             }
-        });
+        });*/
+        
+        llenarMatriz();
+         for (int i = 1; i < 10; i++) {
+            for (int j = 1; j < 13; j++) {
+                if(i==5){
+                    i+=1;
+                }
+               if(sala1[i][j] == false){
+                   asientos.add(new ImageView(libre), i,j,1,1);
+               }else{
+                   asientos.add(new ImageView(ocupado), i,j,1,1);
+               }
+                
+            }
+        }
         
 
     }

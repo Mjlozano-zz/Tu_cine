@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.media.*?>
-<?import javafx.scene.image.*?>
-<?import com.jfoenix.controls.*?>
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="846.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tu_cine.FXMLHome_pageController">
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="846.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tu_cine.FXMLHome_pageController">
    <children>
       <AnchorPane prefHeight="75.0" prefWidth="846.0" style="-fx-background-color: #d32f2f;">
          <children>
@@ -19,11 +15,11 @@
                   <Image url="@Imagenes/logout.png" />
                </image>
             </ImageView>
-            <JFXButton fx:id="pel" contentDisplay="TOP" graphicTextGap="0.0" layoutX="68.0" layoutY="2.0" onAction="#openPeliculas" prefHeight="38.0" prefWidth="69.0" text="Peliculas" textFill="WHITE">
+            <JFXButton fx:id="pel" contentDisplay="TOP" graphicTextGap="0.0" layoutX="32.0" layoutY="2.0" onAction="#openPeliculas" prefHeight="72.0" prefWidth="98.0" text="Peliculas" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="53.0" fitWidth="49.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@Imagenes/movies.png" />
+                        <Image url="@Imagenes/homeicon/peliculas.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -31,34 +27,43 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="pro" contentDisplay="TOP" graphicTextGap="0.0" layoutX="131.0" layoutY="2.0" prefHeight="75.0" prefWidth="93.0" text="Programación" textFill="#fcfcfc">
+            <JFXButton fx:id="pro" contentDisplay="TOP" graphicTextGap="0.0" layoutX="130.0" prefHeight="76.0" prefWidth="123.0" text="Programación" textFill="#fcfcfc">
                <graphic>
                   <ImageView fitHeight="50.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@Imagenes/programacion.png" />
+                        <Image url="@Imagenes/homeicon/programacion.png" />
                      </image>
                   </ImageView>
                </graphic>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
             </JFXButton>
-            <JFXButton fx:id="sal" contentDisplay="TOP" graphicTextGap="0.0" layoutX="224.0" layoutY="3.0" text="Salas" textFill="WHITE">
+            <JFXButton fx:id="sal" contentDisplay="TOP" graphicTextGap="0.0" layoutX="262.0" layoutY="1.0" prefHeight="74.0" prefWidth="67.0" text="Salas" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="48.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@Imagenes/salas.png" />
+                        <Image url="@Imagenes/homeicon/salas.png" />
                      </image>
                   </ImageView>
                </graphic>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
             </JFXButton>
-            <JFXButton fx:id="tic" contentDisplay="TOP" graphicTextGap="0.0" layoutX="288.0" layoutY="2.0" onAction="#openTickets" text="Tickets" textFill="WHITE">
+            <JFXButton fx:id="tic" contentDisplay="TOP" graphicTextGap="0.0" layoutX="344.0" layoutY="1.0" onAction="#openTickets" text="Tickets" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="49.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@Imagenes/tickets.png" />
+                        <Image url="@Imagenes/homeicon/tickets.png" />
                      </image>
                   </ImageView>
                </graphic>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
             </JFXButton>
          </children></AnchorPane>
-      <AnchorPane layoutY="77.0" prefHeight="460.0" prefWidth="846.0" style="-fx-background-color: #ff867c;" />
+      <AnchorPane layoutY="71.0" prefHeight="466.0" prefWidth="846.0" style="-fx-background-color: #ff867c;" />
    </children>
 </AnchorPane>

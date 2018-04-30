@@ -19,7 +19,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-import javax.swing.JOptionPane;
 
 /**
  * FXML Controller class
@@ -30,7 +29,9 @@ public class FXMLCarteleraController implements Initializable {
     public static ArrayList<Pelicula> peliculas = new ArrayList<Pelicula>();
     
     @FXML
-    public Label pelicula_label1,clasificacion_label1, genero_label1,prueba;
+    public Label pelicula_label1,clasificacion_label1, genero_label1, pelicula_label3,clasificacion_label3, genero_label3;
+    @FXML
+    public Label pelicula_label2,clasificacion_label2, genero_label2;
     
     public void addMovie(ActionEvent e) throws IOException {
         Parent home_page_parent = FXMLLoader.load(getClass().getResource("Addpelicula.fxml"));
@@ -58,13 +59,30 @@ public class FXMLCarteleraController implements Initializable {
         ap_stage.show();
     }
     
-
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        peliculas.add(new Pelicula("Avengers: Infinity War","+15","Accion, Ciencia ficcion","dsadsad","ñoihoioih","lifdufñdsif","luldaiusd"));
+    public void setMovie1(){
         pelicula_label1.setText(peliculas.get(0).getNombre());
         genero_label1.setText(peliculas.get(0).getGenero());
         clasificacion_label1.setText(peliculas.get(0).getClasificacion());
+    }
+    public void setMovie2(){
+        pelicula_label2.setText(peliculas.get(1).getNombre());
+        genero_label2.setText(peliculas.get(1).getGenero());
+       clasificacion_label2.setText(peliculas.get(1).getClasificacion());
+    }
+     public void setMovie3(){
+        pelicula_label3.setText(peliculas.get(2).getNombre());
+        genero_label3.setText(peliculas.get(2).getGenero());
+       clasificacion_label3.setText(peliculas.get(2).getClasificacion());
+    }
+    
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        setMovie1();
+        setMovie2();
+        setMovie3();
+        
+   
     }    
     
 }

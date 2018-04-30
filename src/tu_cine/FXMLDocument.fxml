@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<JFXTabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="404.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tu_cine.FXMLDocumentController">
+<JFXTabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="404.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tu_cine.FXMLDocumentController">
    <tabs>
       <Tab text="Iniciar Sesion">
         <content>
@@ -30,7 +30,7 @@
                         <Font size="14.0" />
                      </font>
                   </JFXPasswordField>
-                  <JFXButton layoutX="73.0" layoutY="315.0" onAction="#logIn" prefHeight="41.0" prefWidth="253.0" style="-fx-background-color: #00bcd4;" text="Iniciar Sesion">
+                  <JFXButton layoutX="73.0" layoutY="315.0" onAction="#logIn" prefHeight="41.0" prefWidth="253.0" style="-fx-background-color: #d32f2f;" text="Iniciar Sesion" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>

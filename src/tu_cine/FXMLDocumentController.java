@@ -27,6 +27,7 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import javax.swing.JOptionPane;
+import static tu_cine.FXMLCarteleraController.peliculas;
 
 /**
  *
@@ -207,7 +208,10 @@ public class FXMLDocumentController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         tdoc.getItems().add("Cedula de Ciudadania");
         tdoc.getItems().add("Tarjeta de Identidad");
-        
+        peliculas.add(0,new Pelicula("None","None","None","None","None","None","None"));
+        peliculas.add(1,new Pelicula("None","None","None","None","None","None","None"));
+        peliculas.add(2,new Pelicula("None","None","None","None","None","None","None"));
+        TicketsController.llenarMatriz();
     }    
     
 }

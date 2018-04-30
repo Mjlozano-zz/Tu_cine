@@ -81,7 +81,7 @@
       </AnchorPane>
       <AnchorPane layoutX="86.0" layoutY="76.0" prefHeight="24.0" prefWidth="183.0" style="-fx-background-color: #212121;">
          <children>
-            <Label layoutX="55.0" layoutY="3.0" text="Pantalla" textFill="WHITE">
+            <Label layoutX="59.0" layoutY="3.0" text="Pantalla" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -92,9 +92,9 @@
       <JFXTextField fx:id="txtdocumento" focusColor="#d32f2f" labelFloat="true" layoutX="439.0" layoutY="224.0" prefHeight="31.0" prefWidth="227.0" promptText="Numero de Documento" />
       <JFXComboBox fx:id="pelis" focusColor="#d32f2f" labelFloat="true" layoutX="439.0" layoutY="289.0" prefHeight="25.0" prefWidth="227.0" promptText="Pelicula" />
       <JFXComboBox fx:id="sala" focusColor="#d32f2f" labelFloat="true" layoutX="440.0" layoutY="337.0" promptText="Sala" />
-      <JFXButton layoutX="472.0" layoutY="433.0" prefHeight="37.0" prefWidth="161.0" style="-fx-background-color: #d32f2f;" text="Comprar Ticket" textFill="#fcf8f8">
+      <JFXButton layoutX="453.0" layoutY="431.0" onAction="#cargaSala" prefHeight="44.0" prefWidth="193.0" style="-fx-background-color: #d32f2f;" text="Comprar Ticket" textFill="#fcf8f8">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
          <graphic>
             <ImageView fitHeight="36.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
@@ -113,7 +113,7 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <JFXDatePicker fx:id="fechatxt" defaultColor="#d32f2f" layoutX="531.0" layoutY="337.0" prefHeight="25.0" prefWidth="146.0" promptText="Fecha" />
-      <JFXComboBox fx:id="funciontxt" focusColor="#d32f2f" layoutX="440.0" layoutY="380.0" prefHeight="25.0" prefWidth="70.0" promptText="Funcion" />
+      <JFXDatePicker fx:id="fechatxt" defaultColor="#d32f2f" layoutX="549.0" layoutY="337.0" prefHeight="26.0" prefWidth="128.0" promptText="Fecha" />
+      <JFXComboBox fx:id="funciontxt" focusColor="#d32f2f" layoutX="440.0" layoutY="380.0" prefHeight="26.0" prefWidth="87.0" promptText="Funcion" />
    </children>
 </AnchorPane>

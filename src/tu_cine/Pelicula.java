@@ -1,6 +1,8 @@
 
 package tu_cine;
 
+import java.util.ArrayList;
+
 
 public class Pelicula {
     private String nombre, clasificacion, genero, sinopsis, calidad, director, fechaEstreno;
@@ -13,12 +15,14 @@ public class Pelicula {
         this.calidad = calidad;
         this.director = director;
         this.fechaEstreno = fechaEstreno;
+        
     }
+    
     
     
     @Override
     public String toString(){
-       return "Nombre: "+nombre+"\n"+"Genero: "+genero+"\n"+"Clasificacion: "+clasificacion+"\n"+"Sinopsis: "+sinopsis+"\n"+"Calidad: "+calidad+"\n"+"Director: "+director+"\n"+"Fecha de estreno: "+fechaEstreno;
+       return "Nombre: "+nombre+"\n"+"Genero: "+genero+"\n"+"Clasificacion: "+clasificacion+"\n"+"Sinopsis: "+sinopsis+"\n"+"Calidad: "+calidad+"\n"+"Director: "+director+"\n"+"Fecha de estreno: "+fechaEstreno+"\n";
     }
 
     public String getNombre() {

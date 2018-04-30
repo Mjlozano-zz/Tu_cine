@@ -39,7 +39,7 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="sal" contentDisplay="TOP" graphicTextGap="0.0" layoutX="262.0" layoutY="1.0" prefHeight="74.0" prefWidth="67.0" text="Salas" textFill="WHITE">
+            <JFXButton fx:id="sal" contentDisplay="TOP" graphicTextGap="0.0" layoutX="253.0" layoutY="2.0" onAction="#openTarifas" prefHeight="74.0" prefWidth="81.0" text="Tarifas" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="48.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -63,7 +63,19 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </JFXButton>
+            <JFXButton fx:id="combo" contentDisplay="TOP" graphicTextGap="0.0" layoutX="423.0" layoutY="1.0" onAction="#openCombo" text="Confiteria" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="49.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Imagenes/homeicon/comida.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
          </children></AnchorPane>
-      <AnchorPane layoutY="71.0" prefHeight="466.0" prefWidth="846.0" style="-fx-background-color: #ff867c;" />
+      <AnchorPane layoutY="71.0" prefHeight="466.0" prefWidth="846.0" style="-fx-background-color: #e0e0e0;" />
    </children>
 </AnchorPane>

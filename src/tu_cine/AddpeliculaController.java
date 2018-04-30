@@ -5,7 +5,7 @@
  */
 package tu_cine;
 
-import com.jfoenix.controls.JFXComboBox;
+import com.jfoenix.controls.*;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
@@ -35,16 +35,30 @@ public class AddpeliculaController implements Initializable {
     @FXML
     private JFXTextArea sinoptxt;
     @FXML
-    private JFXComboBox<String> tipopel;
+    private JFXComboBox<String> tipopel, pos;
     @FXML
     private Label txt;
     @FXML
     private JFXDatePicker fechaestrenotxt;
-    
+    @FXML
+    JFXTimePicker hora_funcion;
+             
     public void agregar(ActionEvent e){
-        FXMLCarteleraController.peliculas.add(new Pelicula(nombrepeltxt.getText(), clastxt.getText(),generotxt.getText(),sinoptxt.getText(), tipopel.getSelectionModel().getSelectedItem() ,directortxt.getText(), fechaestrenotxt.getValue().toString()));
+        
+        if (pos.getSelectionModel().getSelectedItem().equals("1")){
+        FXMLCarteleraController.peliculas.set(0,new Pelicula(nombrepeltxt.getText(), clastxt.getText(),generotxt.getText(),sinoptxt.getText(), tipopel.getSelectionModel().getSelectedItem() ,directortxt.getText(), fechaestrenotxt.getValue().toString()));
         System.out.println(FXMLCarteleraController.peliculas.get(0));
-        txt.setText(FXMLCarteleraController.peliculas.get(0).getNombre());
+        
+        }else if(pos.getSelectionModel().getSelectedItem().equals("2")){
+         FXMLCarteleraController.peliculas.set(1,new Pelicula(nombrepeltxt.getText(), clastxt.getText(),generotxt.getText(),sinoptxt.getText(), tipopel.getSelectionModel().getSelectedItem() ,directortxt.getText(), fechaestrenotxt.getValue().toString()));
+        System.out.println(FXMLCarteleraController.peliculas.get(1));
+        
+        }else if(pos.getSelectionModel().getSelectedItem().equals("3")){
+        FXMLCarteleraController.peliculas.set(2,new Pelicula(nombrepeltxt.getText(), clastxt.getText(),generotxt.getText(),sinoptxt.getText(), tipopel.getSelectionModel().getSelectedItem() ,directortxt.getText(), fechaestrenotxt.getValue().toString()));
+        System.out.println(FXMLCarteleraController.peliculas.get(2));
+       
+        }
+      
     }
     
     public void back(ActionEvent e) throws IOException{
@@ -56,12 +70,18 @@ public class AddpeliculaController implements Initializable {
         app_stage.show();
     }
     
+    public void addFuncion(){
+        System.out.println(hora_funcion.getValue());
+    }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         tipopel.getItems().add("2D");
         tipopel.getItems().add("3D");
         tipopel.getItems().add("3D-2D");   
-        
+        pos.getItems().add("1");
+        pos.getItems().add("2");
+        pos.getItems().add("3");
     }    
     
 }

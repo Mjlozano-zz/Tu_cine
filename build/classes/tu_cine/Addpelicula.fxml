@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="540.0" prefWidth="635.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tu_cine.AddpeliculaController">
+<AnchorPane id="AnchorPane" prefHeight="585.0" prefWidth="635.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tu_cine.AddpeliculaController">
    <children>
       <AnchorPane layoutX="37.0" layoutY="83.0" prefHeight="280.0" prefWidth="227.0" style="-fx-background-color: #757575;">
          <children>
@@ -37,7 +37,7 @@
                </font>
             </Label>
          </children></AnchorPane>
-      <JFXButton layoutX="363.0" layoutY="456.0" onAction="#agregar" prefHeight="43.0" prefWidth="183.0" style="-fx-background-color: #d32f2f;" text="Agregar" textFill="WHITE">
+      <JFXButton layoutX="359.0" layoutY="513.0" onAction="#agregar" prefHeight="43.0" prefWidth="183.0" style="-fx-background-color: #d32f2f;" text="Agregar" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -49,9 +49,9 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <JFXDatePicker fx:id="fechaestrenotxt" defaultColor="#d32f2f" layoutX="435.0" layoutY="411.0" prefHeight="26.0" prefWidth="168.0" promptText="Fecha de estreno" />
-      <JFXTimePicker defaultColor="#d32f2f" layoutX="54.0" layoutY="398.0" prefWidth="193.0" promptText="Funciones" />
-      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="239.0" layoutY="390.0" prefHeight="26.0" prefWidth="28.0">
+      <JFXDatePicker fx:id="fechaestrenotxt" defaultColor="#d32f2f" layoutX="450.0" layoutY="411.0" prefHeight="26.0" prefWidth="153.0" promptText="Fecha de estreno" />
+      <JFXTimePicker fx:id="hora_funcion" defaultColor="#d32f2f" layoutX="54.0" layoutY="398.0" prefWidth="193.0" promptText="Funciones" />
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="239.0" layoutY="390.0" onAction="#addFuncion" prefHeight="26.0" prefWidth="28.0">
          <graphic>
             <ImageView fitHeight="32.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -69,5 +69,7 @@
             </ImageView>
          </graphic>
       </JFXButton>
+      <JFXComboBox fx:id="pos" layoutX="338.0" layoutY="455.0" prefHeight="26.0" prefWidth="62.0" promptText="index" />
+      <JFXTextField fx:id="precio" layoutX="433.0" layoutY="455.0" promptText="Precio" />
    </children>
 </AnchorPane>

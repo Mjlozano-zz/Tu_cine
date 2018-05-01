@@ -59,9 +59,12 @@ public class FXMLHome_pageController implements Initializable {
         Stage ap_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         //ap_stage.hide(); //optional
         ap_stage.setScene(tickets_scene);
-        ap_stage.show();
-             
+        ap_stage.show();           
        }
+        
+       public void  mostrarLista(){
+           TicketsController.tiquetes.mostrar();        
+        }
        
        
 

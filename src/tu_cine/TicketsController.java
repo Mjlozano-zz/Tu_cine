@@ -8,6 +8,10 @@ package tu_cine;
 import com.jfoenix.controls.*;
 import java.io.IOException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -33,13 +37,23 @@ public class TicketsController implements Initializable {
     ImageView A1;
 
     @FXML
+    JFXTextField txtnombre;
+
+    @FXML
     JFXComboBox<String> pelis, sala;
 
     @FXML
-    GridPane asientos;
+    JFXDatePicker fechatxt;
 
-   static  Boolean[][] sala1 = new Boolean[10][13];
-   static  Boolean[][] aux = new Boolean[10][13];
+    @FXML
+    GridPane asientos;
+    public static Lista tiquetes = new Lista();
+    
+    String fila[] ={"A","B","C","D","E","F","G","H","I","J","K"};
+    String asiento;
+    int columna;
+    static Boolean[][] sala1 = new Boolean[10][13];
+    static Boolean[][] aux = new Boolean[10][13];
     Image seleccionado = new Image(getClass().getResource("Imagenes/seleccionado.png").toExternalForm());
     Image ocupado = new Image(getClass().getResource("Imagenes/ocupado.png").toExternalForm());
     Image libre = new Image(getClass().getResource("Imagenes/libre.png").toExternalForm());
@@ -49,7 +63,7 @@ public class TicketsController implements Initializable {
             for (int j = 0; j < 13; j++) {
                 aux[i][j] = false;
                 sala1[i][j] = false;
-                
+
             }
         }
     }
@@ -63,12 +77,58 @@ public class TicketsController implements Initializable {
         ap_stage.show();
     }
 
-   public void cargaSala() {
+    public Date obtenerFecha() {
+        Date ahora = new Date();
+        //SimpleDateFormat formateador = new SimpleDateFormat("dd-MM-yyyy");
+        return ahora;
+    }
+
+    public static int getDayOfTheWeek(Date d) {
+        GregorianCalendar cal = new GregorianCalendar();
+        cal.setTime(d);
+        return cal.get(Calendar.DAY_OF_WEEK);
+    }
+    
+    public int calculaPrecio(){
+        int dia = getDayOfTheWeek(obtenerFecha());
+        int valor=0;
+        switch(dia){
+            case 1:
+                valor = 8000;
+                break;
+            case 2:
+                valor = 8000;
+                break;
+            case 3:
+                valor = 4000;
+                break;
+            case 4:
+                valor = 8000;
+                break;
+            case 5:
+                valor = 4000;
+                break;
+            case 6:
+                valor = 8000;
+                break;
+            case 7:
+                valor = 8000;        
+                break;
+        }
+        return valor;
+    }
+    public void comprar(){
+        tiquetes.insertar(new FacturaTicket(txtnombre.getText(), pelis.getSelectionModel().getSelectedItem(), fechatxt.getValue().toString(), sala.getSelectionModel().getSelectedItem()+" "+asiento, calculaPrecio(), 10));
+        cargaSala();
+    }
+
+    public void cargaSala() {
+        
         for (int i = 1; i < 10; i++) {
             for (int j = 1; j < 13; j++) {
                 final int it = i;
                 final int jt = j;
-                final  ImageView estado = new ImageView();
+                final ImageView estado = new ImageView();
                 if (i == 5) {
                     i += 1;
                 }
@@ -85,8 +145,9 @@ public class TicketsController implements Initializable {
 
                     if (estado.getImage() == libre) {
                         estado.setImage(seleccionado);
-                        sala1[it][jt] = true;
-                        
+                        sala1[it][jt] = true;              
+                        asiento = fila[jt-1]+Integer.toString(it);
+
                     } else {
                         estado.setImage(libre);
                     }

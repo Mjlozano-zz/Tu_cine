@@ -50,8 +50,8 @@
          </graphic>
       </JFXButton>
       <JFXDatePicker fx:id="fechaestrenotxt" defaultColor="#d32f2f" layoutX="450.0" layoutY="411.0" prefHeight="26.0" prefWidth="153.0" promptText="Fecha de estreno" />
-      <JFXTimePicker fx:id="hora_funcion" defaultColor="#d32f2f" layoutX="54.0" layoutY="398.0" prefWidth="193.0" promptText="Funciones" />
-      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="239.0" layoutY="390.0" onAction="#addFuncion" prefHeight="26.0" prefWidth="28.0">
+      <JFXTimePicker fx:id="hora_funcion" defaultColor="#d32f2f" layoutX="426.0" layoutY="455.0" prefHeight="26.0" prefWidth="137.0" promptText="Funciones" />
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="563.0" layoutY="447.0" onAction="#addFuncion" prefHeight="26.0" prefWidth="28.0">
          <graphic>
             <ImageView fitHeight="32.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -60,7 +60,7 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="28.0" layoutY="468.0" onAction="#back" prefHeight="39.0" prefWidth="42.0">
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="28.0" layoutY="526.0" onAction="#back" prefHeight="39.0" prefWidth="42.0">
          <graphic>
             <ImageView fitHeight="36.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -70,6 +70,5 @@
          </graphic>
       </JFXButton>
       <JFXComboBox fx:id="pos" layoutX="338.0" layoutY="455.0" prefHeight="26.0" prefWidth="62.0" promptText="index" />
-      <JFXTextField fx:id="precio" layoutX="433.0" layoutY="455.0" promptText="Precio" />
    </children>
 </AnchorPane>

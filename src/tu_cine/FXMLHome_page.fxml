@@ -75,7 +75,20 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </JFXButton>
+            <JFXButton layoutX="667.0" layoutY="27.0" onAction="#mostrarLista" text="Tiquetes" />
          </children></AnchorPane>
-      <AnchorPane layoutY="71.0" prefHeight="466.0" prefWidth="846.0" style="-fx-background-color: #e0e0e0;" />
+      <AnchorPane layoutY="71.0" prefHeight="466.0" prefWidth="846.0" style="-fx-background-color: #e0e0e0;">
+         <children>
+            <ImageView fitHeight="316.0" fitWidth="488.0" layoutX="182.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagenes/cineLogo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="76.0" fitWidth="265.0" layoutX="291.0" layoutY="353.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagenes/tucine.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
    </children>
 </AnchorPane>

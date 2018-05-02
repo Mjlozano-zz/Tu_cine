@@ -62,9 +62,24 @@ public class FXMLHome_pageController implements Initializable {
         ap_stage.show();           
        }
         
+        public void openProgramacion(ActionEvent e) throws IOException{
+        Parent ticket_page_parent = FXMLLoader.load(getClass().getResource("Programacion.fxml"));
+        Scene tickets_scene = new Scene(ticket_page_parent);
+        Stage ap_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        //ap_stage.hide(); //optional
+        ap_stage.setScene(tickets_scene);
+        ap_stage.show();           
+       }
+        
+        
+        
        public void  mostrarLista(){
            TicketsController.tiquetes.mostrar();        
         }
+       
+       public void mostrarFunciones(){
+           AddpeliculaController.funciones.mostrarf();
+       }
        
        
 

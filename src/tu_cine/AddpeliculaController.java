@@ -42,26 +42,28 @@ public class AddpeliculaController implements Initializable {
     private JFXDatePicker fechaestrenotxt;
     @FXML
     JFXTimePicker hora_funcion;
-             
-    public void agregar(ActionEvent e){
-        
-        if (pos.getSelectionModel().getSelectedItem().equals("1")){
-        FXMLCarteleraController.peliculas.set(0,new Pelicula(nombrepeltxt.getText(), clastxt.getText(),generotxt.getText(),sinoptxt.getText(), tipopel.getSelectionModel().getSelectedItem() ,directortxt.getText(), fechaestrenotxt.getValue().toString()));
-        System.out.println(FXMLCarteleraController.peliculas.get(0));
-        
-        }else if(pos.getSelectionModel().getSelectedItem().equals("2")){
-         FXMLCarteleraController.peliculas.set(1,new Pelicula(nombrepeltxt.getText(), clastxt.getText(),generotxt.getText(),sinoptxt.getText(), tipopel.getSelectionModel().getSelectedItem() ,directortxt.getText(), fechaestrenotxt.getValue().toString()));
-        System.out.println(FXMLCarteleraController.peliculas.get(1));
-        
-        }else if(pos.getSelectionModel().getSelectedItem().equals("3")){
-        FXMLCarteleraController.peliculas.set(2,new Pelicula(nombrepeltxt.getText(), clastxt.getText(),generotxt.getText(),sinoptxt.getText(), tipopel.getSelectionModel().getSelectedItem() ,directortxt.getText(), fechaestrenotxt.getValue().toString()));
-        System.out.println(FXMLCarteleraController.peliculas.get(2));
-       
+
+    static Lista funciones = new Lista();
+
+    public void agregar(ActionEvent e) {
+
+        if (pos.getSelectionModel().getSelectedItem().equals("1")) {
+            FXMLCarteleraController.peliculas.set(0, new Pelicula(nombrepeltxt.getText(), clastxt.getText(), generotxt.getText(), sinoptxt.getText(), tipopel.getSelectionModel().getSelectedItem(), directortxt.getText(), fechaestrenotxt.getValue().toString()));
+            System.out.println(FXMLCarteleraController.peliculas.get(0));
+
+        } else if (pos.getSelectionModel().getSelectedItem().equals("2")) {
+            FXMLCarteleraController.peliculas.set(1, new Pelicula(nombrepeltxt.getText(), clastxt.getText(), generotxt.getText(), sinoptxt.getText(), tipopel.getSelectionModel().getSelectedItem(), directortxt.getText(), fechaestrenotxt.getValue().toString()));
+            System.out.println(FXMLCarteleraController.peliculas.get(1));
+
+        } else if (pos.getSelectionModel().getSelectedItem().equals("3")) {
+            FXMLCarteleraController.peliculas.set(2, new Pelicula(nombrepeltxt.getText(), clastxt.getText(), generotxt.getText(), sinoptxt.getText(), tipopel.getSelectionModel().getSelectedItem(), directortxt.getText(), fechaestrenotxt.getValue().toString()));
+            System.out.println(FXMLCarteleraController.peliculas.get(2));
+
         }
-      
+
     }
-    
-    public void back(ActionEvent e) throws IOException{
+
+    public void back(ActionEvent e) throws IOException {
         Parent home_page_parent = FXMLLoader.load(getClass().getResource("FXMLCartelera.fxml"));
         Scene home_page_scene = new Scene(home_page_parent);
         Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
@@ -69,19 +71,20 @@ public class AddpeliculaController implements Initializable {
         app_stage.setScene(home_page_scene);
         app_stage.show();
     }
-    
-    public void addFuncion(){
-        System.out.println(hora_funcion.getValue());
+
+    public void addFuncion() {
+        funciones.insertarf(hora_funcion.getValue().toString());
+        //System.out.println(hora_funcion.getValue().toString());
     }
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         tipopel.getItems().add("2D");
         tipopel.getItems().add("3D");
-        tipopel.getItems().add("3D-2D");   
+        tipopel.getItems().add("3D-2D");
         pos.getItems().add("1");
         pos.getItems().add("2");
         pos.getItems().add("3");
-    }    
-    
+    }
+
 }

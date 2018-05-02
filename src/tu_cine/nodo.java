@@ -12,11 +12,20 @@ package tu_cine;
 public class nodo {
     private nodo siguiente;
     private FacturaTicket dato;
+    private String datoo;
 
     public nodo(nodo siguiente, FacturaTicket dato) {
         this.siguiente = siguiente;
         this.dato = dato;
     }
+
+    public nodo(nodo siguiente, String datoo) {
+        this.siguiente = siguiente;
+        this.datoo = datoo;
+    }
+    
+    
+    
     
 
     public nodo getSiguiente() {
@@ -34,5 +43,15 @@ public class nodo {
     public void setDato(FacturaTicket dato) {
         this.dato = dato;
     }
+
+    public String getDatoo() {
+        return datoo;
+    }
+
+    public void setDatoo(String datoo) {
+        this.datoo = datoo;
+    }
+    
+    
     
 }

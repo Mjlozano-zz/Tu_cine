@@ -33,25 +33,56 @@ public class Lista {
             actual = new nodo(null, factura);
             inicio = actual;
             fin = actual;
-        }else{
+        } else {
             actual = new nodo(null, factura);
             fin.setSiguiente(actual);
             fin = actual;
         }
     }
-    
-    public void mostrar(){
-        if (estaVacia()){
+
+    public void insertarf(String hora) {
+        nodo actual;
+        if (estaVacia()) {
+            actual = new nodo(null, hora);
+            inicio = actual;
+            fin = actual;
+        } else {
+            actual = new nodo(null, hora);
+            fin.setSiguiente(actual);
+            fin = actual;
+        }
+    }
+
+    public void mostrar() {
+        if (estaVacia()) {
             System.out.println("NO HAY TIQUETES VENDIDOS AÚN");
             return;
-        }else{
+        } else {
             nodo temporal;
             temporal = inicio;
-            while(temporal!=null){
+            while (temporal != null) {
                 System.out.println(temporal.getDato().toString());
-                temporal=temporal.getSiguiente();
+                temporal = temporal.getSiguiente();
             }
         }
     }
 
+    public void mostrarf() {
+        int i = 1;
+        if (estaVacia()) {
+            System.out.println("No hay Programacion Disponible");
+            return;
+        } else {
+            nodo temporal;
+            temporal = inicio;
+            while (temporal != null) {
+                System.out.println(temporal.getDatoo());
+                temporal = temporal.getSiguiente();
+
+            }
+
+        }
+    }
 }
+
+

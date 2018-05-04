@@ -68,7 +68,6 @@ public class FXMLDocumentController implements Initializable {
             bw.write("--------------------------------------------------------------------------------------------------------");
             bw.newLine();
             bw.close();
-            //creaNombreUsuario();
             SendMail(creaNombreUsuario());
             idUsuarios();
             passwords();

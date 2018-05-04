@@ -22,6 +22,11 @@
                   <Image url="@Imagenes/banner.png" />
                </image>
             </ImageView>
+            <Label layoutX="306.0" layoutY="9.0" text="CONFITERIA" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
       <AnchorPane layoutX="49.0" layoutY="73.0" prefHeight="260.0" prefWidth="210.0" style="-fx-background-color: #f4f4f4;">

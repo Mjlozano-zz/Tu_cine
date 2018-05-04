@@ -65,7 +65,7 @@
                   <JFXTextField fx:id="txtemail" labelFloat="true" layoutX="62.0" layoutY="135.0" prefHeight="34.0" prefWidth="272.0" promptText="Email" />
                   <JFXPasswordField fx:id="txtpassw" labelFloat="true" layoutX="62.0" layoutY="189.0" prefHeight="35.0" prefWidth="273.0" promptText="Contraseña" />
                   <JFXTextField fx:id="txtdocumento" labelFloat="true" layoutX="61.0" layoutY="296.0" prefHeight="34.0" prefWidth="275.0" promptText="Numero de Documento" />
-                  <JFXButton layoutX="60.0" layoutY="390.0" onAction="#registrar" prefHeight="41.0" prefWidth="276.0" style="-fx-background-color: #00bcd4;" text="Registrarme">
+                  <JFXButton layoutX="60.0" layoutY="390.0" onAction="#registrar" prefHeight="41.0" prefWidth="276.0" style="-fx-background-color: #d32f2f;" text="Registrarme" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>

@@ -22,8 +22,8 @@ import javafx.stage.Stage;
  * @author jesusl
  */
 public class VentaCombosController implements Initializable {
-
-        public void back(ActionEvent e) throws IOException{
+    Lista combos = new Lista();
+    public void back(ActionEvent e) throws IOException {
         Parent home_page_parent = FXMLLoader.load(getClass().getResource("FXMLHome_page.fxml"));
         Scene home_page_scene = new Scene(home_page_parent);
         Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
@@ -31,9 +31,14 @@ public class VentaCombosController implements Initializable {
         app_stage.setScene(home_page_scene);
         app_stage.show();
     }
+    
+    public void comprar(){
+        
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-    
+    }
+
 }

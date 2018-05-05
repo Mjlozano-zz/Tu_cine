@@ -5,6 +5,8 @@
  */
 package tu_cine;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author jesusl
@@ -71,7 +73,7 @@ public class Lista {
     public void mostrarf() {
         int i = 1;
         if (estaVacia()) {
-            System.out.println("No hay Programacion Disponible");
+            JOptionPane.showMessageDialog(null,"No hay programacion disponible" );
             return;
         } else {
             nodo temporal;

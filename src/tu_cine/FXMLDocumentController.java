@@ -50,6 +50,7 @@ public class FXMLDocumentController implements Initializable {
         if (findUser() && findPassw()){
         openWindow(e, "FXMLHome_page.fxml");
         }else{
+            JOptionPane.showMessageDialog(null,"Usuario o Contraseña inconrrectos" );
             System.out.println("Usuario o Contraseña inconrrectos");
         }
     }

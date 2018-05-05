@@ -16,6 +16,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javax.swing.JOptionPane;
 
 /**
  * FXML Controller class
@@ -79,6 +80,15 @@ public class FXMLHome_pageController implements Initializable {
         app_stage.setScene(home_page_scene);
         app_stage.show();
         
+    }
+   public void logOut(ActionEvent e) throws IOException {
+        int resp = JOptionPane.showConfirmDialog(null,"¿Estas seguro?", "Cerrar Sesion", JOptionPane.YES_NO_OPTION);
+        Parent ticket_page_parent = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+        Scene tickets_scene = new Scene(ticket_page_parent);
+        Stage ap_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        ap_stage.hide(); //optional
+        ap_stage.setScene(tickets_scene);
+        ap_stage.show();
     }
 
     public void mostrarLista() {

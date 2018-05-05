@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="310.0" prefWidth="530.0" style="-fx-background-color: #fafafa;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="tu_cine.RecaudoController">
+<AnchorPane id="AnchorPane" prefHeight="310.0" prefWidth="530.0" style="-fx-background-color: #fafafa;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tu_cine.RecaudoController">
    <children>
       <AnchorPane layoutX="300.0" layoutY="71.0" prefHeight="210.0" prefWidth="200.0" style="-fx-background-color: #2962ff;">
          <children>
@@ -48,7 +47,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="36.0">
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="14.0" layoutY="14.0" onAction="#back" prefHeight="30.0" prefWidth="36.0" text="Button">
          <graphic>
             <ImageView fitHeight="39.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -57,5 +56,15 @@
             </ImageView>
          </graphic>
       </JFXButton>
+      <Label layoutX="233.0" layoutY="11.0" text="Caja">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="47.0" fitWidth="49.0" layoutX="184.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Imagenes/recaudo.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

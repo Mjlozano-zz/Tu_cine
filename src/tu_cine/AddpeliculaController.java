@@ -37,7 +37,7 @@ public class AddpeliculaController implements Initializable {
     @FXML
     private JFXComboBox<String> tipopel, pos;
     @FXML
-    private Label txt;
+    public static Label head;
     @FXML
     private JFXDatePicker fechaestrenotxt;
     @FXML

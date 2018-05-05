@@ -31,6 +31,54 @@ public class FacturaTicket {
                 + "\nNumero de de Ticket: "+nfactura+"\n";
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getPelicula() {
+        return pelicula;
+    }
+
+    public void setPelicula(String pelicula) {
+        this.pelicula = pelicula;
+    }
+
+    public String getFecha_funcion() {
+        return fecha_funcion;
+    }
+
+    public void setFecha_funcion(String fecha_funcion) {
+        this.fecha_funcion = fecha_funcion;
+    }
+
+    public String getUbicacion() {
+        return ubicacion;
+    }
+
+    public void setUbicacion(String ubicacion) {
+        this.ubicacion = ubicacion;
+    }
+
+    public int getValor() {
+        return valor;
+    }
+
+    public void setValor(int valor) {
+        this.valor = valor;
+    }
+
+    public int getNfactura() {
+        return nfactura;
+    }
+
+    public void setNfactura(int nfactura) {
+        this.nfactura = nfactura;
+    }
+
 
     
     

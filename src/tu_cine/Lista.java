@@ -62,6 +62,7 @@ public class Lista {
             temporal = inicio;
             while (temporal != null) {
                 System.out.println(temporal.getDato().toString());
+                RecaudoController.recaudoc =+ RecaudoController.recaudoc+temporal.getDato().getValor();
                 temporal = temporal.getSiguiente();
             }
         }

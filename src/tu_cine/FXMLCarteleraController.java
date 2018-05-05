@@ -93,6 +93,23 @@ public class FXMLCarteleraController implements Initializable {
         genero_label3.setText(peliculas.get(2).getGenero());
         clasificacion_label3.setText(peliculas.get(2).getClasificacion());
     }
+    public void modificar(ActionEvent e) throws IOException {
+        Parent home_page_parent = FXMLLoader.load(getClass().getResource("Addpelicula.fxml"));
+        Scene home_page_scene = new Scene(home_page_parent);
+        Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        app_stage.hide(); //optional
+        app_stage.setScene(home_page_scene);
+        app_stage.show();
+        AddpeliculaController.head.setText("Modificar Pelicula");
+    }
+    public void eliminar(ActionEvent e) throws IOException {
+        Parent home_page_parent = FXMLLoader.load(getClass().getResource("Eliminar.fxml"));
+        Scene home_page_scene = new Scene(home_page_parent);
+        Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        app_stage.hide(); //optional
+        app_stage.setScene(home_page_scene);
+        app_stage.show();
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {

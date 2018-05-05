@@ -31,7 +31,7 @@
       <JFXComboBox fx:id="tipopel" focusColor="#d32f2f" layoutX="338.0" layoutY="411.0" promptText="Tipo" />
       <AnchorPane layoutY="-7.0" prefHeight="65.0" prefWidth="635.0" style="-fx-background-color: #d32f2f;">
          <children>
-            <Label layoutX="113.0" layoutY="13.0" text="AÑADIR UNA PELICULA " textFill="WHITE">
+            <Label fx:id="head" layoutX="140.0" layoutY="10.0" text="AÑADIR UNA PELICULA " textFill="WHITE">
                <font>
                   <Font name="System Bold" size="31.0" />
                </font>

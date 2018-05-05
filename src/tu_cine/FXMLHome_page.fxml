@@ -75,7 +75,17 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="667.0" layoutY="27.0" onAction="#mostrarLista" text="Tiquetes" />
+            <JFXButton contentDisplay="TOP" layoutX="689.0" layoutY="7.0" onAction="#listaT" text="Caja" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Imagenes/recaudo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
          </children></AnchorPane>
       <AnchorPane layoutY="71.0" prefHeight="466.0" prefWidth="846.0" style="-fx-background-color: #e0e0e0;">
          <children>

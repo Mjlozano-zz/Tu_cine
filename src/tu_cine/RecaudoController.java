@@ -7,18 +7,26 @@ package tu_cine;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 
 /**
  * FXML Controller class
  *
  * @author Jesús Lozano
  */
-public class ListaTicketsController implements Initializable {
-
+public class RecaudoController implements Initializable {
+    static int recaudoc = 0;
+    static int recaudocc =0;
+    @FXML 
+    Label recaudo_tick, recaudo_combo;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        TicketsController.tiquetes.mostrar();
+        recaudo_tick.setText("$"+String.valueOf(recaudoc));
+        recaudo_combo.setText("$"+String.valueOf(recaudocc));
     }    
     
 }

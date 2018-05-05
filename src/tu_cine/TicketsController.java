@@ -48,7 +48,7 @@ public class TicketsController implements Initializable {
     @FXML
     GridPane asientos;
     public static Lista tiquetes = new Lista();
-    
+    int nfac=0;
     String fila[] ={"A","B","C","D","E","F","G","H","I","J","K"};
     String asiento;
     int columna;
@@ -118,7 +118,7 @@ public class TicketsController implements Initializable {
         return valor;
     }
     public void comprar(){
-        tiquetes.insertar(new FacturaTicket(txtnombre.getText(), pelis.getSelectionModel().getSelectedItem(), fechatxt.getValue().toString(), sala.getSelectionModel().getSelectedItem()+" "+asiento, calculaPrecio(), 10));
+        tiquetes.insertar(new FacturaTicket(txtnombre.getText(), pelis.getSelectionModel().getSelectedItem(), fechatxt.getValue().toString(), sala.getSelectionModel().getSelectedItem()+" "+asiento, calculaPrecio(), nfac+1));
         cargaSala();
     }
 

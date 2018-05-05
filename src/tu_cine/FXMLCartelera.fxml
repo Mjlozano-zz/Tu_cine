@@ -109,7 +109,7 @@
                      </image>
                   </ImageView>
                </graphic></JFXButton>
-            <JFXButton layoutX="583.0" layoutY="452.0" prefHeight="38.0" prefWidth="102.0" text="Eliminar">
+            <JFXButton layoutX="583.0" layoutY="452.0" onAction="#eliminar" prefHeight="38.0" prefWidth="102.0" text="Eliminar">
                <graphic>
                   <ImageView fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -118,7 +118,7 @@
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton layoutX="484.0" layoutY="452.0" prefHeight="38.0" prefWidth="102.0" text="Modificar">
+            <JFXButton layoutX="484.0" layoutY="452.0" onAction="#modificar" prefHeight="38.0" prefWidth="102.0" text="Modificar">
                <graphic>
                   <ImageView fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                      <image>

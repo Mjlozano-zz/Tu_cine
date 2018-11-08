@@ -47,7 +47,7 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     private void logIn(ActionEvent e) throws IOException {
-        if(tusuario.getItems().toString().equals("Administrador")){
+        if(tusuario.getSelectionModel().getSelectedItem().toString().equalsIgnoreCase("administrador")){
             if (findUser() && findPassw()){
         openWindow(e, "FXMLHome_page.fxml");
         }else{
@@ -63,6 +63,7 @@ public class FXMLDocumentController implements Initializable {
         app_stage.setScene(home_page_scene);
         app_stage.show();
         }
+    
         
     }
 

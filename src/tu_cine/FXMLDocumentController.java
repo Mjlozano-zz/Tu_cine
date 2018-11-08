@@ -47,12 +47,23 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     private void logIn(ActionEvent e) throws IOException {
-        if (findUser() && findPassw()){
+        if(tusuario.getItems().toString().equals("Administrador")){
+            if (findUser() && findPassw()){
         openWindow(e, "FXMLHome_page.fxml");
         }else{
             JOptionPane.showMessageDialog(null,"Usuario o Contraseña inconrrectos" );
             System.out.println("Usuario o Contraseña inconrrectos");
         }
+        }else{
+        Parent home_page_parent = FXMLLoader.load(getClass().getResource("Tickets.fxml"));
+        Scene home_page_scene = new Scene(home_page_parent);
+        Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+
+        app_stage.hide(); //optional
+        app_stage.setScene(home_page_scene);
+        app_stage.show();
+        }
+        
     }
 
     @FXML

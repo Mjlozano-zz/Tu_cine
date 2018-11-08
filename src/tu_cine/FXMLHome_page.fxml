@@ -8,7 +8,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="846.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tu_cine.FXMLHome_pageController">
    <children>
-      <AnchorPane prefHeight="75.0" prefWidth="846.0" style="-fx-background-color: #d32f2f;">
+      <AnchorPane prefHeight="75.0" prefWidth="846.0" style="-fx-background-color: #00838f;">
          <children>
             <JFXButton fx:id="pel" contentDisplay="TOP" graphicTextGap="0.0" layoutX="32.0" layoutY="2.0" onAction="#openPeliculas" prefHeight="72.0" prefWidth="98.0" text="Peliculas" textFill="WHITE">
                <graphic>

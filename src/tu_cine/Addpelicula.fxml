@@ -29,7 +29,7 @@
       <JFXTextArea fx:id="sinoptxt" focusColor="#d32f2f" labelFloat="true" layoutX="338.0" layoutY="242.0" prefHeight="96.0" prefWidth="250.0" promptText="Sinopsis" />
       <JFXTextField fx:id="directortxt" focusColor="#d32f2f" layoutX="338.0" layoutY="363.0" prefHeight="29.0" prefWidth="250.0" promptText="Director" />
       <JFXComboBox fx:id="tipopel" focusColor="#d32f2f" layoutX="338.0" layoutY="411.0" promptText="Tipo" />
-      <AnchorPane layoutY="-7.0" prefHeight="65.0" prefWidth="635.0" style="-fx-background-color: #d32f2f;">
+      <AnchorPane layoutY="-7.0" prefHeight="65.0" prefWidth="635.0" style="-fx-background-color: #00838f;">
          <children>
             <Label fx:id="head" layoutX="140.0" layoutY="10.0" text="AÑADIR UNA PELICULA " textFill="WHITE">
                <font>
@@ -37,7 +37,7 @@
                </font>
             </Label>
          </children></AnchorPane>
-      <JFXButton layoutX="359.0" layoutY="513.0" onAction="#agregar" prefHeight="43.0" prefWidth="183.0" style="-fx-background-color: #d32f2f;" text="Agregar" textFill="WHITE">
+      <JFXButton layoutX="359.0" layoutY="513.0" onAction="#agregar" prefHeight="43.0" prefWidth="183.0" style="-fx-background-color: #00838f;" text="Agregar" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -49,8 +49,8 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <JFXDatePicker fx:id="fechaestrenotxt" defaultColor="#d32f2f" layoutX="450.0" layoutY="411.0" prefHeight="26.0" prefWidth="153.0" promptText="Fecha de estreno" />
-      <JFXTimePicker fx:id="hora_funcion" defaultColor="#d32f2f" layoutX="426.0" layoutY="455.0" prefHeight="26.0" prefWidth="137.0" promptText="Funciones" />
+      <JFXDatePicker fx:id="fechaestrenotxt" defaultColor="#00838f" layoutX="450.0" layoutY="411.0" prefHeight="26.0" prefWidth="153.0" promptText="Fecha de estreno" />
+      <JFXTimePicker fx:id="hora_funcion" defaultColor="#00838f" layoutX="426.0" layoutY="455.0" prefHeight="26.0" prefWidth="137.0" promptText="Funciones" />
       <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="563.0" layoutY="447.0" onAction="#addFuncion" prefHeight="26.0" prefWidth="28.0">
          <graphic>
             <ImageView fitHeight="32.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">

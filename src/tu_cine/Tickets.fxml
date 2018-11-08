@@ -65,7 +65,7 @@
             <Label layoutX="307.0" layoutY="359.0" text="Ocupado" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutY="-1.0" prefHeight="50.0" prefWidth="748.0" style="-fx-background-color: #d32f2f;">
+      <AnchorPane layoutY="-1.0" prefHeight="50.0" prefWidth="748.0" style="-fx-background-color: #00838f;">
          <children>
             <ImageView fitHeight="56.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -97,7 +97,7 @@
       <JFXTextField fx:id="txtdocumento" focusColor="#d32f2f" labelFloat="true" layoutX="439.0" layoutY="224.0" prefHeight="31.0" prefWidth="227.0" promptText="Numero de Documento" />
       <JFXComboBox fx:id="pelis" focusColor="#d32f2f" labelFloat="true" layoutX="439.0" layoutY="289.0" prefHeight="25.0" prefWidth="227.0" promptText="Pelicula" />
       <JFXComboBox fx:id="sala" focusColor="#d32f2f" labelFloat="true" layoutX="440.0" layoutY="337.0" promptText="Sala" />
-      <JFXButton layoutX="453.0" layoutY="431.0" onAction="#comprar" prefHeight="44.0" prefWidth="193.0" style="-fx-background-color: #d32f2f;" text="Comprar Ticket" textFill="#fcf8f8">
+      <JFXButton layoutX="453.0" layoutY="431.0" onAction="#comprar" prefHeight="44.0" prefWidth="193.0" style="-fx-background-color: #00838f;" text="Comprar Ticket" textFill="#fcf8f8">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

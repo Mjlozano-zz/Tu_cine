@@ -40,7 +40,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private JFXPasswordField txtpassw, txtcontrase;
     @FXML
-    private JFXComboBox tdoc;
+    private JFXComboBox<String> tdoc, tusuario;
     @FXML
     private JFXDatePicker bornDatetxt;
 
@@ -208,6 +208,10 @@ public class FXMLDocumentController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         tdoc.getItems().add("Cedula de Ciudadania");
         tdoc.getItems().add("Tarjeta de Identidad");
+        tusuario.getItems().add("Administrador");
+        tusuario.getItems().add("Usuario");
+        
+        
         peliculas.add(0,new Pelicula("None","None","None","None","None","None","None"));
         peliculas.add(1,new Pelicula("None","None","None","None","None","None","None"));
         peliculas.add(2,new Pelicula("None","None","None","None","None","None","None"));
